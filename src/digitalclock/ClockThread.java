@@ -16,7 +16,6 @@ public class ClockThread extends Thread {
         start();
         
     
-        
     }
     
     public void run () {
