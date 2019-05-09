@@ -1,8 +1,8 @@
 package digitalclock;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
-import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -19,8 +19,12 @@ public class DigitalClock extends JFrame {
         jlabClock =  new JLabel();
         setLayout(new FlowLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jlabClock.setFont(new Font("Calibri", Font.CENTER_BASELINE, 80));
+        jlabClock.setOpaque(true);
+        jlabClock.setBackground(Color.BLUE);
+        jlabClock.setForeground(Color.WHITE);
         add(jlabClock);
-        setSize(800,800);
+        setSize(1400,120);
         setLocationRelativeTo(null);
         ct = new ClockThread(this);
         setVisible(true);
